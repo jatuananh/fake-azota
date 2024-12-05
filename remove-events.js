@@ -26,7 +26,7 @@
         originalAddEventListener.call(this, type, listener, options);
     };
 
-    // Ghi đè hàm removeEventListener để ghi log (tuỳ chọn)
+    // Ghi đè hàm removeEventListener để ghi log
     const originalRemoveEventListener = EventTarget.prototype.removeEventListener;
     EventTarget.prototype.removeEventListener = function (type, listener, options) {
         console.log(`Removed ${type} listener`);
